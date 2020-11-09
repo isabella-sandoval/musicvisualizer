@@ -24,9 +24,6 @@ rangeInput.oninput = function(){
 
 
 
-
-
-
 function fetchData(query) {
    
     fetch(`https://rest.bandsintown.com/artists/${query}/events/?app_id=88d19a898ccecc016e8e00885e4e7df9&date=2010-01-01%2C2021-01-01`)
@@ -36,7 +33,7 @@ function fetchData(query) {
             }
             return res.json()
         }).then(data => {
-            events = Object.values(data).map(event=> {
+            var events = Object.values(data).map(event=> {
                 console.log(event)
                
                 if(`${event.datetime}`.startsWith(currentyear)){return `
@@ -55,6 +52,11 @@ function fetchData(query) {
                 // const json = event;
                 // const obj = JSON.parse(json);
                 // console.log(obj.lineup, obj.venue)
+
+            // let points = events
+
+            // points = d3.csvParse(({ longitude, latitude }) => [+longitude, +latitude])
+
            
         })
 }
@@ -76,3 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+
+
+

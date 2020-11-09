@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Project</title>
+    <title>Tour Visualizer</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <!-- <script src="../src/globe.js" defer></script> -->
@@ -81,7 +81,7 @@
                     context.stroke();
                     
                     projection.rotate([spin, -20])
-                    spin -= 0.7
+                        spin -= 0.7
                 
                     
                     var graticule = d3.geoGraticule();
@@ -90,6 +90,7 @@
                     geoGenerator(graticule());
                     context.stroke();
 
+                   
                 }
 
 
