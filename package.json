@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/isabella-sandoval/musicvisualizer/issues"
   },
-  "homepage": "https://github.com/isabella-sandoval/musicvisualizer#readme"
+  "homepage": "https://github.com/isabella-sandoval/musicvisualizer#readme",
+  "dependencies": {
+    "geojson-to-svg": "^1.0.3"
+  }
 }

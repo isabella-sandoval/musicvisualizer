@@ -79,3 +79,52 @@ body {
 /* .year-slide{
     position:relative;
 } */
+
+.range-input{
+    position: absolute;
+    top:20%;
+    left: 60%;
+    transform:translate(-50%,-50%);
+    /* background: #5be4c7; */
+    padding:10px 20px;
+    display:flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.range-input input{
+    -webkit-appearance: none;
+    width: 200px;
+    height: 2px;
+    align-items: center;
+    border: none;
+    outline:none;
+
+}
+
+.range-input .value{
+    -webkit-appearance: none;
+
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    font-weight: 600;
+    line-height: 40px;
+    height: 40px;
+    /* overflow: hidden; */
+    margin-left: 10px;
+
+}
+
+.range-input .value div{
+    transition: all 100ms ease-in-out;
+}
+
+/* .range-input input::-webkit-slider-thumb{
+     -webkit-appearance: none;
+     width: 20px;
+     height: 20px;
+
+} */
+
+
+
