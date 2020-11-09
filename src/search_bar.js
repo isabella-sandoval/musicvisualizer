@@ -34,16 +34,18 @@ function fetchData(query) {
             return res.json()
         }).then(data => {
             var events = Object.values(data).map(event=> {
-                console.log(event)
+                // console.log(event)
                
                 if(`${event.datetime}`.startsWith(currentyear)){return `
-                    <div>Date:${event.datetime}<div>
-                    <div>Lineup:${event.lineup}<div>
-                    <div>Venue: ${event.venue.name}</div>
-                    <div>Latitude: ${event.venue.latitude}</div>
-                    <div>Longitude: ${event.venue.longitude}</div>
-                    <div>Location: ${event.venue.city} ${event.venue.region}, ${event.venue.country}</div>
-                    <p>
+                    <div class="event-deets">
+                        <div>Date:${event.datetime}<div>
+                        <div>Lineup:${event.lineup}<div>
+                        <div>Venue: ${event.venue.name}</div>
+                        <div>Location: ${event.venue.city} ${event.venue.region},${event.venue.country}</div>
+                        <div>Latitude: ${event.venue.latitude}</div>
+                        <div>Longitude: ${event.venue.longitude}</div>
+                        <p>
+                    </div>    
                 `}
             }).join('');
             document.getElementById('event-data')
