@@ -79,11 +79,13 @@ body {
     padding-top: 11%;
     float: right;
     padding-right: 20%;
+    width: 520px;
 }
 .event-deets{
     display:block;
     color: black;
     font-family: "Courier New", Courier, monospace;
+    width: fit-content;
     
     
 }
