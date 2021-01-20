@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Visualizer</title>
     <link rel="stylesheet" href="./dist/main.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="./src/globe.js"></script>
+    <!-- <script src="./src/globe.js"></script> -->
     <!-- <script src="../src/globe.js" defer></script> -->
     
 </head>
@@ -94,13 +94,18 @@
                    
                 }
 
-
-                // d3.json("/Users/isabella/Desktop/JS/data/custom.geo.json", function (err, json) {
+                
+                //  d3.json("file:///Users/isabella/Desktop/JS/data/custom.geo.json", function (err, json) {
+                //         geojson = json;
+                //         window.setInterval(update, 100);
+                //     })
+                
                 d3.json("https://gist.githubusercontent.com/d3indepth/f28e1c3a99ea6d84986f35ac8646fac7/raw/c58cede8dab4673c91a3db702d50f7447b373d98/ne_110m_land.json", function (err, json) {
                     geojson = json;
                     window.setInterval(update, 100);
                 })
-                
+
+              
                 
             </script>
 

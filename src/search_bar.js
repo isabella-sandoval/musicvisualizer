@@ -1,22 +1,16 @@
 let rangeInput = document.querySelector(".range-input input");
 let rangeValue = document.querySelector(".range-input .value div");
 
-// let start = parseFloat(rangeInput.min);
-// let end = parseFloat(rangeInput.max);
-// let step = parseFloat(rangeInput.step);
-
-// for (let i = start; i <= end; i += step) {
-//     rangeValue.innerHTML += '<div>' + i + '</div>';
-// }
-
-// rangeInput.addEventListener("input", function () {
-//     let top = parseFloat(rangeInput.value) / (step * -40);
-//     rangeValue.style.marginTop = top + "px";
-// });
 
 rangeValue.innerHTML = rangeInput.value
 
+rangeInput.onChange 
+
 rangeInput.oninput = function(){
+    let list = document.getElementById("event-data")
+    while(list.lastChild){
+        list.removeChild(list.lastChild)
+    }
     rangeValue.innerHTML = this.value
     currentyear = rangeValue.innerHTML
 }
@@ -51,17 +45,19 @@ function fetchData(query) {
             document.getElementById('event-data')
                 .insertAdjacentHTML("afterbegin", events);
                 
-                // const json = event;
-                // const obj = JSON.parse(json);
-                // console.log(obj.lineup, obj.venue)
+                
+                const json = events;
+                const obj = JSON.parse(json);
+                console.log(obj.lineup, obj.venue)
 
-            // let points = events
+            let points = events
 
-            // points = d3.csvParse(({ longitude, latitude }) => [+longitude, +latitude])
+            points = d3.json(({ longitude, latitude }) => [+longitude, +latitude])
 
            
         })
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // console.log(search);
@@ -74,8 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let results = fetchData(query.value);
 
-
-        // console.log(results)
     })
 
 
