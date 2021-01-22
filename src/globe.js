@@ -23,3 +23,6 @@
 //     document.getElementById("slider-current-year").style.left = `calc( 100% - 12.5px - ${document.getElementById("slider-current-year").offsetWidth / 2}px)`;
 // }
 
+// d3.json("./data/geo.json", function (err, json) {
+//     console.log(json)
+// })
