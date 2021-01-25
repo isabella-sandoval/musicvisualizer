@@ -1,4 +1,5 @@
-{
+
+export default myGeoJson = {
     "type": "FeatureCollection",
     "features": [
         {

@@ -1,3 +1,5 @@
+
+// import {returnedTarget} from "globe.js"
 let rangeInput = document.querySelector(".range-input input");
 let rangeValue = document.querySelector(".range-input .value div");
 
@@ -30,7 +32,26 @@ function fetchData(query) {
             var events = Object.values(data).map(event=> {
                 // console.log(event)
                
-                if(`${event.datetime}`.startsWith(currentyear)){return `
+                if(`${event.datetime}`.startsWith(currentyear)){
+                    // var eventLat = event.venue.latitude
+                    // var eventLong = event.venue.longitude
+
+                    
+                    // var dat = returnedTarget.features.parse(txt);  //parse the JSON
+                    //     dat.push({
+                    //         "type": "Feature",
+                    //         "geometry": {
+                    //             "type": "Point",
+                    //             "coordinates": [eventLat, eventLong]
+                    //         },
+                    //         "properties": {
+                    //             "name": "randomvenue"
+                    //         }
+                    //     });
+                    
+                    //     txt = JSON.stringify(dat); 
+
+                    return `
                     <div class="event-deets">
                         <div>Date:${event.datetime}<div>
                         <div>Lineup:${event.lineup}<div>
@@ -45,18 +66,40 @@ function fetchData(query) {
             document.getElementById('event-data')
                 .insertAdjacentHTML("afterbegin", events);
                 
+                var events
                 
-                const json = events;
-                const obj = JSON.parse(json);
-                console.log(obj.lineup, obj.venue)
+               
+                // const json = events;
+                // const obj = JSON.parse(json);
+                // console.log(obj.Lineup, obj.Venue)
 
-            let points = events
+            // let points = events
 
-            points = d3.json(({ longitude, latitude }) => [+longitude, +latitude])
+            // points = d3.json(({ longitude, latitude }) => [+longitude, +latitude])
 
            
         })
 }
+
+// {
+//     "type": "Feature",
+//         "properties": {
+//         "featurecla": "Country",
+//             "scalerank": 1
+//     },
+//     "geometry": {
+//         "type": "Point",
+//             "coordinates": [
+//                 [
+//                     [
+//                         -125.559566406895286,
+//                         -73.481353454735199
+//                     ],
+
+//                 ]
+//             ]
+//     }
+// },
 
 
 document.addEventListener('DOMContentLoaded', () => {
