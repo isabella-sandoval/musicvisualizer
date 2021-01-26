@@ -1,24 +1,13 @@
 
 
 
-{/* <script type="module" src="./data/geo.js"></script> */}
-// let rangeInput = document.querySelector(".range-input input");
-// let rangeValue = document.querySelector(".range-input .value div");
-
-// import { myGeoJson } from './data/geo.js'
 
 document.addEventListener('DOMContentLoaded', () => {
     // console.log(search);
     const globe = document.getElementById('globe');
     const searchbar = document.getElementById('search');
 
-    
-    // globe.addEventListener("submit", (e) => {
-    //     e.preventDefault()
-
-    //     let query = document.getElementById('query');
-
-    //     let results = fetchData(query.value);
+ 
 
         var context = d3.select('#content canvas')
             .node()
@@ -83,8 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // debugger
                 window.setInterval(update, 100);
                 // console.log(geojson)
-                var returnedTarget = Object.assign({}, geojson);
-                console.log(returnedTarget)
+                returnedTarget = Object.assign({}, geojson);
+                // console.log(returnedTarget)
+                // list = []
+                // list.append(geojson);
+
+                // console.log(list)
             })
     
             

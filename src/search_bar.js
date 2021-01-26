@@ -2,7 +2,7 @@
 // import {returnedTarget} from "globe.js"
 let rangeInput = document.querySelector(".range-input input");
 let rangeValue = document.querySelector(".range-input .value div");
-
+let returnedTarget = document.querySelector(".globe-content canvas")
 
 rangeValue.innerHTML = rangeInput.value
 
@@ -29,28 +29,35 @@ function fetchData(query) {
             }
             return res.json()
         }).then(data => {
+            // console.log(geojson["features"])
             var events = Object.values(data).map(event=> {
                 // console.log(event)
-               
                 if(`${event.datetime}`.startsWith(currentyear)){
-                    // var eventLat = event.venue.latitude
-                    // var eventLong = event.venue.longitude
+                    // for (i = 0; i < data.length; i++) {
+                    //     returnedTarget.append({ Point: [eventLat, eventLong] })
+                    // }
+                
 
-                    
-                    // var dat = returnedTarget.features.parse(txt);  //parse the JSON
-                    //     dat.push({
-                    //         "type": "Feature",
-                    //         "geometry": {
-                    //             "type": "Point",
-                    //             "coordinates": [eventLat, eventLong]
-                    //         },
-                    //         "properties": {
-                    //             "name": "randomvenue"
-                    //         }
-                    //     });
-                    
-                    //     txt = JSON.stringify(dat); 
+                    var eventLat = event.venue.latitude
+                    var eventLong = event.venue.longitude
+                    // console.log(eventLat, eventLong)
+                    // GeoJSON.append(returnedTarget, c);
+                    // var dat = JSON.append(returnedTarget, { Point: [eventLat, eventLong] });  //parse the JSON
+                    // returnedTarget.push({ Point: [eventLat, eventLong] })
 
+                    feature = {}
+                    feature['type'] = 'Feature'
+                    feature['geometry'] = {
+                        'type': 'Point',
+                        'coordinates': [eventLong, eventLat]
+                    }
+                    feature['properties'] = { }
+                    returnedTarget['features'].push(feature)
+
+                   
+                    
+                        
+                    console.log(returnedTarget)
                     return `
                     <div class="event-deets">
                         <div>Date:${event.datetime}<div>
@@ -66,7 +73,7 @@ function fetchData(query) {
             document.getElementById('event-data')
                 .insertAdjacentHTML("afterbegin", events);
                 
-                var events
+            // console.log(returnedTarget)
                 
                
                 // const json = events;
