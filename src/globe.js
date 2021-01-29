@@ -1,48 +1,31 @@
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    // console.log(search);
-    const globe = document.getElementById('globe');
-    const searchbar = document.getElementById('search');
-
- 
 
         var context = d3.select('#content canvas')
             .node()
             .getContext('2d');
-            // .data(events.features);
             
             
-            var projection = d3.geoOrthographic()
-            // var projection = d3.geoGnomonic()
-            // var projection = d3.geoAzimuthalEqualArea()
+        var projection = d3.geoOrthographic()
             .scale(230);
-            
-            
-            
-            var geoGenerator = d3.geoPath()
-            .projection(projection)
-            .pointRadius(4)
-            .context(context);
-            
-        // context.enter()
-        //     .append('point')
-        //     .attr('d', geoGenerator);
-
-   
         
+            
+        var geoGenerator = d3.geoPath()
+        .projection(projection)
+        .pointRadius(4)
+        .context(context);
+   
         var spin = 300;
         
         function update() {
             context.clearRect(0, 0, 800, 600);
             
-            context.lineWidth = 0.8;
+            context.lineWidth = 0.9;
             context.strokeStyle = '#333';
+            // context.strokeStyle = 
             
             context.beginPath();
-            geoGenerator({ type: 'FeatureCollection', features: geojson.features })
+            geoGenerator({ type: 'FeatureCollection', features: returnedTarget.features })
             context.stroke();
             
             projection.rotate([spin, -20])
@@ -50,11 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
             
             
             var graticule = d3.geoGraticule();
-            context.beginPath();
-            context.strokeStyle = '#ABB2B9';
+                context.beginPath();
+                context.strokeStyle = '#d9dcde';
+            
             geoGenerator(graticule());
             context.stroke();
-            
+
+            // var lineGenerator = d3.line()
+            //     .curve(d3.curveCardinal);
+            // geoGenerator(lineGenerator());
+
+            // var ctx = d3.point();
+            // ctx.strokeStyle = 'blue';
+            // ctx.strokeRect(10, 10, 100, 100);
+
         }
         
         
@@ -79,8 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // console.log(list)
             })
-    
-            
         });
         
         

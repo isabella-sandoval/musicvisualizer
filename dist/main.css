@@ -31,7 +31,8 @@ body {
 .search-container {
     display: flex;
     justify-content: center;
-    padding: 30px;
+    padding-top: 10%;
+    padding-bottom: 5%;
     
 } 
      
@@ -66,7 +67,11 @@ body {
 /* globe */
 
 
-
+canvas{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
 
 .globe{
     padding-top: 80px;
@@ -77,27 +82,33 @@ body {
 /* events */
 
 #event-data{
-    padding-top: 11%;
     float: right;
-    padding-right: 20%;
+    padding-right: 35%;
     width: 520px;
+    /* height: 400px; */
+    overflow: hidden;
+
 }
-.event-deets{
+.event-deets {
     display:block;
     color: black;
     font-family: "Courier New", Courier, monospace;
     width: fit-content;
-    
-    
+
 }
+
+     
+
+
+
 
 /* slider */
 
 
 .range-input{
     position: absolute;
-    top:20%;
-    left: 60%;
+    top:10%;
+    left: 50%;
     transform:translate(-50%,-50%);
     /* background: #5be4c7; */
     padding:10px 20px;
@@ -108,7 +119,7 @@ body {
 
 .range-input input{
     -webkit-appearance: none;
-    width: 200px;
+    width: 300px;
     height: 2px;
     align-items: center;
     border: none;
@@ -127,18 +138,26 @@ body {
     
     margin-left: 10px;
 
+
 }
 
 /* .range-input .value div{
     transition: all 100ms ease-in-out;
-} */
+}  */
 
 /* .range-input input::-webkit-slider-thumb{
      -webkit-appearance: none;
      width: 20px;
      height: 20px;
 
+}
+
+
+
+/* .geo_point{
+    color:blueviolet;
 } */
 
+ 
 
 

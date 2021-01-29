@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./dist/main.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    
     <!-- <script src="./src/globe.js"></script> -->
     <!-- <script src="../src/globe.js" defer></script> -->
     
@@ -19,10 +20,9 @@
             <button value="search" id="enter" type="submit">See Artist Tour History</button>
         </form>
     </div>
-</body>
+
     
 
-    <!-- slider     -->
     <!-- <div class="mainslider">
         <input class="year-slide" type="range" min="2010" max="2020" value="2015" step="1">
         <div class="selector">
@@ -33,6 +33,7 @@
         
     </div> -->
     
+    <!-- slider  -->
     <div class="range-input">
         <input type="range" min="2010" max="2020" value="2010" step="1">
         <div class="value">
@@ -42,25 +43,24 @@
     </div>
     
     
-    <div id="event-data"></div>
     
     <!-- globe -->
     
     <div id="globe">
-        
         <div id="content" class="globe-content">
-            <canvas width="900" height="900"></canvas>
-        </div>
-        
-         
+            <canvas width="900" height="580"></canvas>
+        </div>  
     </div>
+
+    <div class="headline" id="event-data"></div>
+   
     
     
+</body>
     <script src="./data/geo.json"></script>
     <script src="./src/search_bar.js"></script>
     <script src="./dist/main.css"></script>
-    <script src="./src/globe.js" ></script> -->
-    
+    <script src="./src/globe.js" ></script>
     
 </html>
 
