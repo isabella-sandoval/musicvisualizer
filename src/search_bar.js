@@ -75,6 +75,7 @@ function fetchData(query) {
                         <p>
                        
                     </div> `
+                    
                 }
             }).join('');
             document.getElementById('event-data')

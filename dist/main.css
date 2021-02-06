@@ -30,10 +30,9 @@ body {
     font-family: 'Baloo 2', cursive;
     display: flex;
     justify-content: center;
-    font-size: 60px;
-    /* margin: 7% */
-    /* padding: 25px; */
-        margin-bottom: 0;
+    font-size: 65px;
+    margin-bottom: 0;
+    margin-top:3%;
 }
 
 
@@ -57,8 +56,8 @@ body {
 .search-container {
     display: flex;
     justify-content: center;
-    padding-top: 8%;
-    padding-bottom: 5%;
+    padding-top: 7%;
+    padding-bottom: 3%;
     
 } 
      
@@ -133,7 +132,7 @@ canvas{
 
 .range-input{
     position: absolute;
-    top:30%;
+    top:28%;
     left: 50%;
     transform:translate(-50%,-50%);
     /* background: #5be4c7; */
@@ -152,6 +151,8 @@ canvas{
     outline:none;
 
 }
+
+
 
 .range-input .value{
     -webkit-appearance: none;
