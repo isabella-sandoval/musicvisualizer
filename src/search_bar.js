@@ -52,9 +52,10 @@ function fetchData(query) {
                         'coordinates': [eventLong, eventLat],
                         
                     }
-                    feature['style'] = {
-                        'fill': '#ff7800'  
-                    }
+                    // feature['style'] = {
+                    //     'fillColor': '#ff7800',
+                    //     'fillOpacity': 1  
+                    // }
                     feature['class']= {
                         "baseVal": "geo_point",
                         "stroke-width": "3",

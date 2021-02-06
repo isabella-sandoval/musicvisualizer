@@ -1,4 +1,5 @@
 
+
 body {
     background: linear-gradient(256deg, #bec64f, #5be4c7, #847de8, #e5eff0);
     background-size: 800% 800%;
@@ -24,14 +25,39 @@ body {
     100%{background-position:0% 50%};
 }
 
+/* header */
+.title{
+    font-family: 'Baloo 2', cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    /* margin: 7% */
+    /* padding: 25px; */
+        margin-bottom: 0;
+}
 
+
+.link_div{
+    display:flex;
+    justify-content:center;
+}
+
+.link_div a{
+    padding: 10px;
+}
+.links{
+    
+    font-family: 'Baloo 2', cursive;
+    text-decoration: none;
+    color: whitesmoke;
+}
 
 /* search bar */
 
 .search-container {
     display: flex;
     justify-content: center;
-    padding-top: 10%;
+    padding-top: 8%;
     padding-bottom: 5%;
     
 } 
@@ -70,7 +96,7 @@ body {
 canvas{
     display: flex;
     justify-content: center;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .globe{
@@ -107,11 +133,11 @@ canvas{
 
 .range-input{
     position: absolute;
-    top:10%;
+    top:30%;
     left: 50%;
     transform:translate(-50%,-50%);
     /* background: #5be4c7; */
-    padding:10px 20px;
+    /* padding:10px 20px; */
     display:flex;
     align-items: center;
     border-radius: 10px;
@@ -161,3 +187,6 @@ canvas{
  
 
 
+/* .fab fa-linkedin{
+    width: 20px;
+} */
