@@ -70,7 +70,7 @@ body {
     background-color: whitesmoke;
     font-family: "Courier New", Courier, monospace;
     opacity: 0.4;
-    font-size: 12px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
     box-shadow: 0 0 5px #000
@@ -109,10 +109,10 @@ canvas{
 
 #event-data{
     float: right;
-    width: 520px;
-    padding-right: 18%;
-    /* height: 400px; */
-    /* overflow: hidden; */
+    width: 370px;
+    padding-right: 25%;
+    height: 400px;
+    overflow: scroll;
 
 }
 .event-deets {
