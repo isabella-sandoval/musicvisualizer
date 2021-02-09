@@ -95,6 +95,7 @@ body {
 canvas{
     display: flex;
     justify-content: center;
+    padding-left: 8%;
     /* margin: auto; */
 }
 
@@ -108,10 +109,10 @@ canvas{
 
 #event-data{
     float: right;
-    padding-right: 35%;
     width: 520px;
+    padding-right: 18%;
     /* height: 400px; */
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 .event-deets {
