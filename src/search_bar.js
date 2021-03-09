@@ -88,14 +88,10 @@ function fetchData(query) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // console.log(search);
     const searchbar = document.getElementById('search');
 
     searchbar.addEventListener("submit", (e) => {
-        
-        // returnedTarget["features"] = returnedTarget["features"].slice(0, 127)
         e.preventDefault()
-        // console.log(returnedTarget)
         console.log(returnedTarget)
         let query = document.getElementById('query');
 
@@ -105,12 +101,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
-
-
-
-// <div>Venue: ${event.venue.name}</div>
-{/* <div>Lineup:${event.lineup}<div></div> */}
-//                         <div>Location: ${event.venue.city} ${event.venue.region},${event.venue.country}</div>
-//                         <div>Latitude: ${event.venue.latitude}</div>
-//                         <div>Longitude: ${event.venue.longitude}</div>
