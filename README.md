@@ -7,6 +7,6 @@ The venues locations are projected on a 3D globe that iss built implementing geo
 The data is fetched from the BandsInTown API.
 
 
-#Technologies/API
+## Technologies/API
 
 HTML5, ES6 JavaScript, d3.json, CSS, BandsinTown API
