@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
             
         var geoGenerator = d3.geoPath()
-        .projection(projection)
-        .pointRadius(4)
-        .context(context);
+            .projection(projection)
+            .pointRadius(4)
+            .context(context);
    
         var spin = 300;
         
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             geoGenerator(graticule());
             context.stroke();
-
+            d3.selectAll("Point").style("color", "blue");
 
         }
         
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 geojson = json;
                 window.setInterval(update, 100);
                 returnedTarget = Object.assign({}, geojson);
-                
+           
             })
         });
         
