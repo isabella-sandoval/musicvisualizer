@@ -19,24 +19,22 @@ rangeInput.oninput = function(){
 
 
 
-
 function fetchData(query) {
-    
-    fetch(`https://rest.bandsintown.com/artists/${query}/events/?app_id=88d19a898ccecc016e8e00885e4e7df9&date=2010-01-01%2C2021-01-01`)
-    .then(res => {
-        if (!res.ok) {
-            throw Error("artist does not exist")
-        }
-        return res.json()
-    }).then(data => {
+    fetch(`https://rest.bandsintown.com/artists/${query}/events/?app_id=ebdae322684828c0dd45547f79fc27df&date=2010-01-01%2C2021-01-01`)
+        .then(res => {
+            if (!res.ok) {
+                throw Error("artist does not exist")
+            }
+            return res.json()
+        }).then(data => {
             // console.log(geojson["features"])
             // returnedTarget["features"]
-            returnedTarget["features"] = returnedTarget["features"].slice(0,127)
-            
-            var events = Object.values(data).map(event=> {
+            returnedTarget["features"] = returnedTarget["features"].slice(0, 127)
+
+            var events = Object.values(data).map(event => {
                 // console.log(event)
-                if(`${event.datetime}`.startsWith(currentyear)){
-                    
+                if (`${event.datetime}`.startsWith(currentyear)) {
+
                     var eventLat = event.venue.latitude
                     var eventLong = event.venue.longitude
                     // var myStyle = {
@@ -50,19 +48,19 @@ function fetchData(query) {
                     feature['geometry'] = {
                         'type': 'Point',
                         'coordinates': [eventLong, eventLat],
-                        
+
                     }
                     // feature['style'] = {
                     //     'fillColor': '#ff7800',
                     //     'fillOpacity': 1  
                     // }
-                    feature['class']= {
+                    feature['class'] = {
                         "baseVal": "geo_point",
                         "stroke-width": "3",
                         "fill-opacity": 0.6
                     }
                     // returnedTarget["features"] = returnedTarget["features"].slice(0, 126)
-                    returnedTarget['features'].push(feature)  
+                    returnedTarget['features'].push(feature)
                     console.log(returnedTarget)
 
                     return `
@@ -75,15 +73,17 @@ function fetchData(query) {
                         <p>
                        
                     </div> `
-                    
+
                 }
             }).join('');
             document.getElementById('event-data')
                 .insertAdjacentHTML("afterbegin", events);
-               
-           
+
+
         })
 }
+
+
 
 
 
