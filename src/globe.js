@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
             
             
         var projection = d3.geoOrthographic()
-            .scale(230);
+            .scale(250);
         
             
         var geoGenerator = d3.geoPath()
             .projection(projection)
-            .pointRadius(4)
+            .pointRadius(3)
             .context(context);
    
         var spin = 300;
@@ -28,17 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
             context.stroke();
             
             projection.rotate([spin, -20])
-            spin -= 0.7
+            spin -= 1
             
             
             var graticule = d3.geoGraticule();
                 context.beginPath();
                 context.strokeStyle = '#d9dcde';
-            
-            geoGenerator(graticule());
-            context.stroke();
-            d3.selectAll("Point").style("color", "blue");
-
+                
+                geoGenerator(graticule());
+                context.stroke();
+                
         }
         
         

@@ -18,7 +18,6 @@ rangeInput.oninput = function(){
 }
 
 
-
 function fetchData(query) {
     fetch(`https://rest.bandsintown.com/artists/${query}/events/?app_id=ebdae322684828c0dd45547f79fc27df&date=2010-01-01%2C2021-01-01`)
         .then(res => {
@@ -27,41 +26,28 @@ function fetchData(query) {
             }
             return res.json()
         }).then(data => {
-            // console.log(geojson["features"])
-            // returnedTarget["features"]
             returnedTarget["features"] = returnedTarget["features"].slice(0, 127)
 
             var events = Object.values(data).map(event => {
-                // console.log(event)
                 if (`${event.datetime}`.startsWith(currentyear)) {
 
                     var eventLat = event.venue.latitude
                     var eventLong = event.venue.longitude
-                    // var myStyle = {
-                    //     "color": "#ff7800",
-                    //     "weight": 5,
-                    //     "opacity": 0.65
-                    // };
+                    var venueName = event.venue.name
 
                     feature = {}
                     feature['type'] = 'Feature'
+
+                    feature["properties"] = {
+                        'title': venueName,
+                    }
+                
                     feature['geometry'] = {
                         'type': 'Point',
                         'coordinates': [eventLong, eventLat],
+                    }
 
-                    }
-                    // feature['style'] = {
-                    //     'fillColor': '#ff7800',
-                    //     'fillOpacity': 1  
-                    // }
-                    feature['class'] = {
-                        "baseVal": "geo_point",
-                        "stroke-width": "3",
-                        "fill-opacity": 0.6
-                    }
-                    // returnedTarget["features"] = returnedTarget["features"].slice(0, 126)
                     returnedTarget['features'].push(feature)
-                    console.log(returnedTarget)
 
                     return `
                     <div class="event-deets">
@@ -78,8 +64,6 @@ function fetchData(query) {
             }).join('');
             document.getElementById('event-data')
                 .insertAdjacentHTML("afterbegin", events);
-
-
         })
 }
 
