@@ -74,7 +74,8 @@ var colors = ["red", "blue", "green", "yellow", "pink", "orange", "purple"];
 document.addEventListener('DOMContentLoaded', () => {
     const searchbar = document.getElementById('search');
     const earth = document.getElementById('globe');
-    const links = document.querySelectorAll('.links')
+    const links = document.querySelectorAll('.links');
+    const line = document.querySelector('.line')
 
     searchbar.addEventListener("submit", (e) => {
         e.preventDefault()
@@ -85,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let randColor = colors[Math.floor(Math.random() * colors.length)];
 
         earth.setAttribute("style", `filter: drop-shadow(0 0 0.75rem ${randColor.toString()}`);
+        line.setAttribute("style", `filter: drop-shadow(0 0 0.75rem ${randColor.toString()}`);
         links.forEach(link => link.setAttribute("style", `filter: drop-shadow(1px 1px 1mm ${randColor.toString()}`));
     })
 

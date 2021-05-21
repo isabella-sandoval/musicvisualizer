@@ -45,7 +45,6 @@ body {
     padding: 10px;
 }
 .links{
-    
     font-family: 'Baloo 2', cursive;
     text-decoration: none;
     color: whitesmoke;
@@ -67,26 +66,30 @@ body {
     padding: 6px;
     margin-top: 8px;
     margin-right: 16px;
-    background-color: whitesmoke;
-    font-family: "Courier New", Courier, monospace;
+    background-color: rgba(245, 245, 245, 0.472);
+    font-family: 'Baloo 2', cursive;
     opacity: 0.4;
     font-size: 14px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 0 5px #000
+    box-shadow: 0 0 5px #000;
+    outline: none;
 }
 
 .search-container button:hover {
-
     box-shadow: 0 0 25px #000
 } 
 
+
+
 .text-input {
-    font-family: "Courier New", Courier, monospace;
-    box-shadow: 0 0 1px #000;
-    font-size: 16px;
-    background-color:whitesmoke;
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+    background-color:rgba(245, 245, 245, 0.472);
     opacity: 0.7;
+    border: none;
+    outline: none;
+    color: rgb(51, 51, 51);
 }
 
 /* globe */
@@ -118,7 +121,7 @@ canvas{
 .event-deets {
     display:block;
     color: black;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Baloo 2', cursive;
     width: fit-content;
 
 }
@@ -136,8 +139,6 @@ canvas{
     top:28%;
     left: 50%;
     transform:translate(-50%,-50%);
-    /* background: #5be4c7; */
-    /* padding:10px 20px; */
     display:flex;
     align-items: center;
     border-radius: 10px;
@@ -150,23 +151,19 @@ canvas{
     align-items: center;
     border: none;
     outline:none;
-
+    background-color: whitesmoke;
 }
 
 
 
 .range-input .value{
     -webkit-appearance: none;
-
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Baloo 2', cursive;
     text-align: center;
     font-weight: 600;
     line-height: 40px;
     height: 40px;
-    
     margin-left: 10px;
-
-
 }
 
 
