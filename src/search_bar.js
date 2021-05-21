@@ -1,5 +1,4 @@
 
-// import {returnedTarget} from "globe.js"
 let rangeInput = document.querySelector(".range-input input");
 let rangeValue = document.querySelector(".range-input .value div");
 let returnedTarget = document.querySelector(".globe-content canvas")
@@ -69,19 +68,27 @@ function fetchData(query) {
 
 
 
+var colors = ["red", "blue", "green", "yellow", "pink", "orange", "purple"];
 
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchbar = document.getElementById('search');
+    const earth = document.getElementById('globe');
+    const links = document.querySelectorAll('.links')
 
     searchbar.addEventListener("submit", (e) => {
         e.preventDefault()
         console.log(returnedTarget)
         let query = document.getElementById('query');
+        fetchData(query.value);
 
-        let results = fetchData(query.value);
+        let randColor = colors[Math.floor(Math.random() * colors.length)];
 
+        earth.setAttribute("style", `filter: drop-shadow(0 0 0.75rem ${randColor.toString()}`);
+        links.forEach(link => link.setAttribute("style", `filter: drop-shadow(1px 1px 1mm ${randColor.toString()}`));
     })
 
 });
+
+
 
