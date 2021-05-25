@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             
         var projection = d3.geoOrthographic()
-            .scale(250);
+            .scale(230);
         
             
         var geoGenerator = d3.geoPath()

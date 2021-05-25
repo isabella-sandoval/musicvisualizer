@@ -26,24 +26,28 @@ body {
 }
 
 /* header */
+.header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .title{
     font-family: 'Baloo 2', cursive;
     display: flex;
-    justify-content: center;
     font-size: 65px;
     margin-bottom: 0;
-    margin-top:3%;
 }
 
 
 .link_div{
     display:flex;
-    justify-content:center;
 }
 
 .link_div a{
     padding: 10px;
 }
+
 .links{
     font-family: 'Baloo 2', cursive;
     text-decoration: none;
@@ -55,7 +59,7 @@ body {
 .search-container {
     display: flex;
     justify-content: center;
-    padding-top: 7%;
+    padding-top: 5%;
     padding-bottom: 3%;
     
 } 
@@ -72,12 +76,11 @@ body {
     font-size: 14px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 0 5px #000;
     outline: none;
 }
 
 .search-container button:hover {
-    box-shadow: 0 0 25px #000
+    box-shadow: 0 0 25px rgb(168, 166, 166)
 } 
 
 
@@ -92,39 +95,23 @@ body {
     color: rgb(50, 50, 50);
 }
 
-/* globe */
-
-
-canvas{
-    display: flex;
-    justify-content: center;
-    padding-left: 8%;
-    /* margin: auto; */
-}
-
-.globe{
-    padding-top: 80px;
-    height: 100%;
-}
 
 
 /* events */
 
 #event-data{
-    float: right;
-    width: 370px;
-    padding-right: 25%;
-    height: 400px;
-    overflow: scroll;
-
-}
-.event-deets {
-    display:block;
-    color: rgb(68, 67, 67);
+    overflow:scroll;
+    max-height: 400px;
     font-family: 'Baloo 2', cursive;
-    width: fit-content;
+    padding-left: 6%;
+
 }
 
+
+.results{
+    display:flex;
+    flex-direction: row;
+}
      
 
 
@@ -135,7 +122,7 @@ canvas{
 
 .range-input{
     position: absolute;
-    top:28%;
+    top:25%;
     left: 50%;
     transform:translate(-50%,-50%);
     display:flex;
@@ -147,7 +134,7 @@ canvas{
 .range-input input{
     -webkit-appearance: none;
     width: 300px;
-    height: 2px;
+    height: 1px;
     align-items: center;
     border: none;
     outline:none;
@@ -157,7 +144,7 @@ canvas{
 
 
 .range-input .value{
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     font-family: 'Baloo 2', cursive;
     text-align: center;
     font-weight: 600;
