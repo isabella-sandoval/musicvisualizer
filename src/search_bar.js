@@ -70,16 +70,16 @@ function fetchData(query) {
                     }
 
                     returnedTarget['features'].push(feature)
+                    
+                    let newdate = new Date(event.datetime);
+
 
                     return `
                         <div class="event-deets">
-                            <div>Date:${event.datetime}<div>
-                            <div>Venue: ${event.venue.name}</div>
+                            <div>Date: ${String(newdate).slice(4, 15)}<div>
                             <div>Location: ${event.venue.city} ${event.venue.region},${event.venue.country}</div>
-                            <div>Lineup:${event.lineup}<div></div>
-                            
+                            <div>Venue: ${event.venue.name}</div>
                             <p>
-                        
                         </div> `
                 }
             }).join('');
