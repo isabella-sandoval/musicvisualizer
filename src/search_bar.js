@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchbar.addEventListener("submit", (e) => {
         e.preventDefault()
-        console.log(returnedTarget)
+        // console.log(returnedTarget)
         let query = document.getElementById('query');
         fetchData(query.value);
 
@@ -76,7 +76,7 @@ function fetchData(query) {
 
                     return `
                         <div class="event-deets">
-                            <div>Date: ${String(newdate).slice(4, 15)}<div>
+                            <div>${String(newdate).slice(4, 15)}<div>
                             <div>Location: ${event.venue.city} ${event.venue.region},${event.venue.country}</div>
                             <div>Venue: ${event.venue.name}</div>
                             <p>
