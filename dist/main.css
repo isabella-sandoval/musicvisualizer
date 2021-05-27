@@ -144,7 +144,6 @@ body {
 
 
 .range-input .value{
-    /* -webkit-appearance: none; */
     font-family: 'Baloo 2', cursive;
     text-align: center;
     font-weight: 600;
@@ -153,6 +152,16 @@ body {
     margin-left: 10px;
 }
 
-    
+input[type="range"]::-webkit-slider-thumb{
+   -webkit-appearance:none !important;  
+   width:25px;
+   height:15px;
+   -webkit-appearance: none;
+    border-radius: 5px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border:1px solid rgba(128, 128, 128, 0.527);   
+    background: rgba(245, 245, 245, 0.349);
 
+}
 
