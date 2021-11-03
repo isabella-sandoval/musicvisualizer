@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchData(query) {
-    fetch(`https://rest.bandsintown.com/artists/${query}/events/?app_id=ebdae322684828c0dd45547f79fc27df&date=2010-01-01%2C2021-01-01`)
+    fetch(`https://rest.bandsintown.com/artists/${query}/events/?app_id=3bed3f73f57307f8b6b8a441f4e7a3b6&date=2010-01-01%2C2021-01-01`)
         .then(res => {
             if (!res.ok) {
                 throw Error("artist does not exist")
